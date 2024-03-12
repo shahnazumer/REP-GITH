@@ -29,8 +29,6 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           if [ ! -f requirements.txt ]; then echo "Error: requirements.txt not found"; exit 1; fi
           if [ ! -f instructions.txt ]; then echo "Error: instructions.txt not found"; exit 1; fi
-           # Ensure the bin directory of Python is added to the PATH
-          export PATH="$PATH:/home/runner/.local/bin"
           # Now use Python interpreter to run pytest
           python -m pytest --ignore=env
   
