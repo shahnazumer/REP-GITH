@@ -37,6 +37,7 @@ jobs:
     steps:
       - name: Run unit tests
         run: |
+          python -m pip install pytest
           pytest --ignore=env
           
 
