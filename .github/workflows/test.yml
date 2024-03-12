@@ -38,7 +38,7 @@ jobs:
     steps:
       - name: Run unit tests
         run: |
-          pytest --ignore=env
+          python -m pytest
           
 
   static-code-analysis:
