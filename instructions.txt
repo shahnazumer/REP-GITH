@@ -1,0 +1,16 @@
+- Environtment set up commands
+- python -m venv env or python3 -m venv
+- env/Scripts/Activate.ps1 (for windows)
+- source env/bin/activate (for linux)
+- deactivate
+
+- Get requirements commands
+- pip list
+- pip freeze > requirements.txt
+- pip install -r requirements.txt
+
+- Uprade pip command
+- python -m pip install --upgrade pip
+
+- Fast api startup commands
+- uvicorn main:app (prod)
