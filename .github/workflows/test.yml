@@ -37,7 +37,9 @@ jobs:
     steps:
       - name: Run unit tests
         run: |
-          pytest --ignore=env
+          pip install pytest
+          export PYTHONPATH=main.py
+          pytest
           
 
   static-code-analysis:
