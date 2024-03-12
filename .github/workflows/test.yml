@@ -29,7 +29,7 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           if [ ! -f requirements.txt ]; then echo "Error: requirements.txt not found"; exit 1; fi
           if [ ! -f instructions.txt ]; then echo "Error: instructions.txt not found"; exit 1; fi
-          # Now use Python interpreter to run pytest
+          # Use Python interpreter to run pytest
           python -m pytest --ignore=env
   
   unit-test:
