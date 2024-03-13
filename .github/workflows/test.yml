@@ -45,7 +45,7 @@ jobs:
     steps:
       - name: Run unit test with pytest
         run: |
-          pytest
+          python -m pytest
           
 
   static-code-analysis:
