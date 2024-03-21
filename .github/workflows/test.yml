@@ -23,11 +23,13 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       # Check for the existence of requirements.txt and instructions.txt
+      
       - name: install dependencies 
         run: |
           python -m pip install --upgrade pip
           python -m pip install pytest
           python -m pip install flake8 pytest
+          python -m pip install -r requirements.txt
           if [ ! -f requirements.txt ]; then pip install -r requirements.txt; fi
           if [ ! -f requirements.txt ]; then echo "Error: requirements.txt not found"; exit 1; fi
           if [ ! -f instructions.txt ]; then echo "Error: instructions.txt not found"; exit 1; fi
@@ -43,9 +45,13 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Run unit test with pytest
-        run: |
-          python -m pytest
+    - name: Install pytest
+      run: |
+        python -m pip install pytest
+
+    - name: Run unit test with pytest
+      run: |
+        python -m pytest
           
 
   static-code-analysis:
