@@ -51,9 +51,9 @@ jobs:
 
     - name: Run unit test with pytest
       run: |
-        python -m pytest test.py
+        python -m pytest ${{ github.workspace }}/test.py
+    
           
-
   static-code-analysis:
     needs: unit-test
     runs-on: ubuntu-latest
