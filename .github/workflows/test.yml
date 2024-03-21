@@ -51,7 +51,7 @@ jobs:
 
     - name: Run unit test with pytest
       run: |
-        python -m pytest
+        python -m pytest test.py
           
 
   static-code-analysis:
