@@ -17,3 +17,7 @@ def test_read_root():
     # Assert that the response body contains the expected data
     assert response.json() == {"Hello": "World"}
 
+# If the file is executed directly, run the tests
+if __name__ == "__main__":
+    pytest.main(["-v", "-s", "test.py"])
+
